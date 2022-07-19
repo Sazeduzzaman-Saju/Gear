@@ -33,7 +33,7 @@ body{
     justify-content: center;
 
 }
-.container {
+.header-content {
     width: 1080px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -121,8 +121,7 @@ font-size: 16px;
 
 .partners-brand {
     width: 1080px;
-    padding: 16px;
-    height: 75px;
+    padding-top: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,9 +136,7 @@ font-size: 16px;
     grid-template-columns: repeat(7, 1fr);
     justify-content: center;
     align-items: center;
-    grid-column-gap: 61px;
-    
-    
+    grid-column-gap: 61px; 
 }
 .partner img{
     width: 100%;
@@ -156,6 +153,13 @@ font-size: 16px;
 .popular-collection{
     width: 1080px;
 }
+
+.collection-title{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--footer-color);
+}
 .collections{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -166,6 +170,8 @@ font-size: 16px;
 }
 .collection{
     width: 100%;
+    box-shadow: rgb(17 12 46 / 15%) 0px 48px 100px 0px;
+    border-radius: 16px;
 
 }
 .product img{
@@ -185,6 +191,9 @@ font-size: 16px;
 .ratings{
     color: var(--rating-icon-color);
 }
+.collection-details{
+    padding: 15px;
+}
 .collection p{
     
     font-style: normal;
@@ -192,8 +201,12 @@ font-size: 16px;
     font-size: 14px;
     color: var(--secondary-color);
 }
+#extra-collection{
+    display: none;
+}
 .see-more{
     padding-top: 30px;
+    padding-bottom: 30px;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -211,7 +224,6 @@ font-size: 16px;
 /* -------------------------------------------------------------------------- */
 
 .feature-area{
-    padding-top: 150px;
     width: 1080px;
     display: flex;
     justify-content: center;
@@ -219,6 +231,8 @@ font-size: 16px;
     padding-bottom: 80px;
 }
 .features{
+    padding-top: 30px;
+    padding-bottom: 30px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 96px;
@@ -235,11 +249,11 @@ font-size: 16px;
     font-size: 38px;
 }
 /* -------------------------------------------------------------------------- */
-/*                           Feature Area Design End                          */
+/*                        ===Feature Area Design End===                       */
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------------------------------------------------- */
-/*                          Footer Area Design Start                          */
+/*                        ===Footer Area Design Start===                      */
 /* -------------------------------------------------------------------------- */
 footer{
     width: 100%;
@@ -270,4 +284,119 @@ footer{
     background-color: var(--footer-color);
     border-radius: 25px;
     padding: 5px 10px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                        ===Footer Area Design End===                      */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                     ===Media Query For Mobile Device===                    */
+/* -------------------------------------------------------------------------- */
+
+@media only screen and (max-width:768px) {
+    nav{
+        display: none;
+    }
+    .top-banner-area, .top-banner-area img, .collection-title {
+        width: 100%;
+        text-align: center;
+
+    }   
+    .top-banner {
+        grid-template-columns: repeat(1, 1fr);
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+    .popular-collection, .feature-area{
+        width: 100%;
+    }
+    .collections {
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+    }
+    .features{
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 30px ;
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        
+    }
+
+    .partners-brand{
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .partners {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 50px;
+        padding: 160px;
+        padding-top: 50px;
+    }
+ 
+    .collection {
+        width: 100%;
+        box-shadow: rgb(17 12 46 / 15%) 0px 48px 100px 0px;
+        border-radius: 16px;
+    }
+
+    .brand {
+        color: var(--footer-color);
+        margin-left: 170px;
+        margin-top: 30px;
+    }
+
+
+}
+
+/* -------------------------------------------------------------------------- */
+/*                     ===Media Query For Tablet Device===                    */
+/* -------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 920px) {
+    .header-content {
+        width: 100%;
+
+    }
+    .top-banner-area, .top-banner-area img, .collection-title, .features {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+
+    }   
+    .top-banner {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    .popular-collection, .feature-area{
+        width: 100%;
+    }
+    .partners-brand{
+        width: 100%;
+        margin-top: 0px;
+    }
+    .collections {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+    }
+    .collection {
+        width: 100%;
+        box-shadow: rgb(17 12 46 / 15%) 0px 48px 100px 0px;
+        border-radius: 16px;
+    }
+
+    .brand {
+        color: var(--footer-color);
+        margin-left: 170px;
+        margin-top: 30px;
+    }
+
+
 }
